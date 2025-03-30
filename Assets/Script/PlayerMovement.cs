@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
-    public float speed = 1f;
+    public float speed = 2f;
+    public float sprintSpeed = 4f;
 
     private float x;
     private float y;
@@ -58,6 +59,17 @@ public class PlayerMovement : MonoBehaviour
 
     void getInput()
     {
+        //sprint
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            speed = sprintSpeed;
+        }
+        else
+        {
+            speed = 2f;
+        }
+
+
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
         input = new Vector2(x, y);
