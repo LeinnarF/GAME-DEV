@@ -864,7 +864,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1234,6 +1234,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: f32109b6b333a3e49b0e1cc500d774ef, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 33
     m_Data: {fileID: -989524964, guid: 243fa8d2059b05f4ab14358b205cc4c6, type: 3}
@@ -1245,6 +1247,8 @@ Tilemap:
     m_Data: {fileID: -754140472, guid: 243fa8d2059b05f4ab14358b205cc4c6, type: 3}
   - m_RefCount: 7
     m_Data: {fileID: -650364672, guid: 243fa8d2059b05f4ab14358b205cc4c6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1219419480, guid: 243fa8d2059b05f4ab14358b205cc4c6, type: 3}
   m_TileMatrixArray:
@@ -1272,8 +1276,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -28, y: -5, z: 0}
-  m_Size: {x: 36, y: 7, z: 1}
+  m_Origin: {x: -28, y: -12, z: 0}
+  m_Size: {x: 41, y: 14, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -14682,6 +14686,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7819160889075032699, guid: 84b87230d84f7a944a1829bd742958f3, type: 3}
   m_PrefabInstance: {fileID: 3889534538905249395}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1958856703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.98336
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5356946
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706035655806857, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118182469900700236, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
+      propertyPath: m_Name
+      value: Fox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e2799d45ee55864e8864c545dbcb0c3, type: 3}
 --- !u!1 &2057113940
 GameObject:
   m_ObjectHideFlags: 0
@@ -15284,3 +15345,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2057113944}
   - {fileID: 141019511}
+  - {fileID: 1958856703}
