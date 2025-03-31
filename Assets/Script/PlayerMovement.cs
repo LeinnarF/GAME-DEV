@@ -69,9 +69,15 @@ public class PlayerMovement : MonoBehaviour
             speed = 2f;
         }
 
-
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
+
+        // Prevent diagonal movement
+        if (x != 0)
+        {
+            y = 0;
+        }
+
         input = new Vector2(x, y);
         input.Normalize();
     }
