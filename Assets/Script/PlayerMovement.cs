@@ -159,5 +159,4 @@ public class PlayerMovement : MonoBehaviour
             currentFishingSpot = null;
         }
     }
-
 }
