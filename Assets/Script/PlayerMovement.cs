@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private Coroutine fishingCoroutine;
     private bool fishCaught = false;
     public bool isInCameraMode = false;
-    public GameObject cameraOverlay;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         Animate();
-        Kamera();
     }
 
     private void Animate()
@@ -82,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (isInCameraMode == false || isFishing == false)
+        if (!isFishing)
         {
             x = Input.GetAxisRaw("Horizontal");
             y = Input.GetAxisRaw("Vertical");
@@ -160,28 +159,5 @@ public class PlayerMovement : MonoBehaviour
             currentFishingSpot = null;
         }
     }
-    void Kamera()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            isInCameraMode = !isInCameraMode;
-            Debug.Log("Camera Mode: " + isInCameraMode);
-            anim.SetBool("isCameraOn", isInCameraMode);
 
-            if (isInCameraMode)
-            {
-                FindFirstObjectByType<KameraMovement>().SnapToPlayer();
-            }
-
-            if (cameraSprite != null)
-            {
-                cameraSprite.enabled = isInCameraMode;
-            }
-
-            if (cameraOverlay != null)
-            {
-                cameraOverlay.SetActive(isInCameraMode);
-            }
-        }
-    }
 }
