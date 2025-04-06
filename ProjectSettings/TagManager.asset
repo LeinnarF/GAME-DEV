@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - FishingSpot
+  - Kamera
   layers:
   - Default
   - TransparentFX
