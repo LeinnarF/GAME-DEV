@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
-    public SpriteRenderer cameraSprite;
+    public SpriteRenderer cmeraSprite;
+    public GameObject cameraOverlay;
     public float speed = 2f;
     public float sprintSpeed = 4f;
     private float x;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         Animate();
+        Kamera();
     }
 
     private void Animate()
@@ -86,6 +88,15 @@ public class PlayerMovement : MonoBehaviour
             x = Input.GetAxisRaw("Horizontal");
             y = Input.GetAxisRaw("Vertical");
         }
+
+        if (isInCameraMode)
+        {
+            x = 0;
+            y = 0;
+            input = Vector2.zero;
+            return;
+        }
+
 
 
         // Prevent diagonal movement
@@ -157,6 +168,29 @@ public class PlayerMovement : MonoBehaviour
         {
             isInFishingSpot = false;
             currentFishingSpot = null;
+        }
+    }
+
+    void Kamera()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            isInCameraMode = !isInCameraMode;
+            Debug.Log("Camera mode toggled: " + isInCameraMode);
+            anim.SetBool("Camera", isInCameraMode);
+
+            if (isInCameraMode)
+            {
+                FindAnyObjectByType<CameraMode>().SnapToPlayer();
+            }
+            if (cmeraSprite != null)
+            {
+                cmeraSprite.enabled = isInCameraMode;
+            }
+            if (cameraOverlay != null)
+            {
+                cameraOverlay.SetActive(isInCameraMode);
+            }
         }
     }
 }
