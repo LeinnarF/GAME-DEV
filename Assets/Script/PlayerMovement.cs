@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         Animate();
         Kamera();
+        Kamera();
     }
 
     private void Animate()

@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - FishingSpot
+- Tree
+- House
+- Ground
+- Animal
+- Spawner
+- aura
+- FishingSpot
+- Kamera
   layers:
   - Default
   - TransparentFX
